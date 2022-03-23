@@ -23,14 +23,14 @@ export default function (context, options = {}) {
         .createHash("md5")
         .update(trimListText)
         .digest("hex");
-      console.log("node hash: " + nodeHash);
+    //   console.log("node hash: " + nodeHash);
       const nodeHashParent = crypto
         .createHash("md5")
         .update(trimListTextParent)
         .digest("hex");
-      console.log("node parent hash: " + nodeHashParent);
+    //   console.log("node parent hash: " + nodeHashParent);
       if (parentHash === "" || parentHash !== nodeHashParent) {
-        console.log("clear!");
+        // console.log("clear!");
         itemHashSet.clear();
         parentHash = nodeHashParent;
       }
